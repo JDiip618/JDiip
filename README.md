@@ -5,14 +5,12 @@
 
 **现有模型：**
 
-- 分割模型：https://github.com/lxc86739795/parsing_platform/releases/download/v0.1/pspnet_mvp_coarse.pth
-
 - [deeplabv3_mvp_coarse.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/deeplabv3_mvp_coarse.pth)
-- [deeplabv3_mvp_fine.pth]https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/deeplabv3_mvp_fine.pth)
+- [deeplabv3_mvp_fine.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/deeplabv3_mvp_fine.pth)
 - [detection.caffemodel](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/detection.caffemodel)
 - [hrnet_mvp_coarse.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/hrnet_mvp_coarse.pth)
 - [hrnet_mvp_fine.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/hrnet_mvp_fine.pth)
-- [LIP_BraidNet.pth]https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/LIP_BraidNet.pth)
+- [LIP_BraidNet.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/LIP_BraidNet.pth)
 - [LIP_CCNet.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/LIP_CCNet.pth)
 - [LIP_CE2P.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/LIP_CE2P.pth)
 - [LIP_DANet.pth](https://github.com/lxc86739795/human_vehicle_parsing_platform/releases/download/v0.1/LIP_DANet.pth)
