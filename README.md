@@ -7,12 +7,72 @@
 - 售后：400-098-8505转2
 - 邮箱：jdcloud@jd.com
 
-**SDK：**
+**SDK示例：**
+
 1、可在以下链接下载，我们提供java与python两种语言的sdk供您选用：
 - [Java SDK](http://jdai.oss.cn-north-1.jcloudcs.com/aisdk/sdk-java.zip)
 - [Python SDK](http://jdai.oss.cn-north-1.jcloudcs.com/aisdk/sdk-java.zip)
 
 2、查看每个API使用sdk调用的示例代码（示例代码仅作参考，请根据实际情况做相应调整）
+
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# 本代码仅供参考，请根据实际情况进行调整
+import wx_sdk
+
+url = 'https://aiapi.jd.com/jdai/faceCompareV1'
+bodyStr = '{"imgBase64A":"","imgBase64B":""}' #body中的内容
+params = { 
+    'appkey' : '0ccd6e004761ce2463bcab06054e0815',
+    'secretkey' : 'your secretKey'
+}
+
+response = wx_sdk.wx_post_req( url, params, bodyStr=bodyStr )
+print( response.text )
+```
+
+3、通过sdk计算sign：
+- 把secretkey和timestamp参数值进行拼装 例如：
+
+| 字段 | 参数 |
+|--------|--------|
+|secretkey	|2e148773a0338a8f2200ba90d445f084|
+|timestamp	|1541491668060|
+
+拼装结果为： ```2e148773a0337a8f2200ba90d445f0841541491668060```
+
+- 在maven仓库的pom.xml中增加以下内容
+
+```xml
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>27.1-jre</version>
+</dependency>
+```
+
+- 使用MD5对拼装完的字符串进行加密，获取```sign```
+
+```java
+import com.google.common.hash.Hashing;
+import java.nio.charset.Charset;
+
+String secretKey = "2e148773a0338a8f2200ba90d445f084";
+long timestamp = System.currentTimeMillis();
+String sign = Hashing.md5().hashString(secretKey + timestamp, Charset.forName("UTF-8")).toString();
+```
+
+4、业务错误代码说明：
+
+| 业务错误码 | 说明 |
+|--------|--------|
+|1	|成功|
+|8	|校验信息错误|
+|10	|无法识别|
+|100 |	参数错误|
+|103	|文件编码后大小超限|
+|105	|查询失败|
 
 ### **现有模型：**
 
